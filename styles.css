@@ -1,0 +1,10 @@
+body{
+    background-color: aqua;
+    font-family: sans-serif, Arial;
+    color: bisque;
+}
+div{
+    border: 2px  solid black;
+    margin: auto;
+    width: 50%;
+}
