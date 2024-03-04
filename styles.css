@@ -1,10 +1,104 @@
-body{
-    background-color: aqua;
-    font-family: sans-serif, Arial;
-    color: bisque;
+
+.page {
+    position: relative;
+    height: 100vw;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 4vw auto 8vw;
+    background-color: #f8f9fa;
+    grid-template-areas:
+        "log log log . . . . . .  nav"
+        "cont cont  cont cont cont cont cont cont cont cont"
+        "foot foot foot foot foot foot foot foot foot foot ";
+        
 }
-div{
+.line{
     border: 2px  solid black;
-    margin: auto;
-    width: 50%;
+    margin-bottom: 3px;
+    
+}
+span[class="line sho"] {
+  border: 2px solid rgb(183, 4, 237);
+  margin-bottom: 3px;
+  width: 12.5px;
+  transition: all 0.5s  ease;
+  
+}
+.menu-toggle:hover span[class="line sho"] {
+    
+        border: 2px solid rgb(183, 4, 237);
+        margin-bottom: 3px;
+        width: 22px;
+}
+ul:hover{
+    opacity: 1;
+}
+
+
+  
+
+.menu-toggle{
+    
+    display: flex;
+    width: 25px;
+    position: absolute;
+    flex-direction: column;
+    top: 20px;
+    left: 87.3vw;
+   
+
+}
+.logo{
+    position: absolute;
+    left: 186px;
+    top: 19px;
+}
+img{
+    width: 4vw;
+    }
+nav {
+    position: absolute;
+    grid-area: nav;
+    right:166px; 
+    
+
+}
+.menu-toggle:hover span[class="line sho"] +ul{
+    opacity: 1;
+}
+ul{
+    opacity: 0;
+}
+
+ul li {
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f2e4e4;
+    width: 150px;
+    padding-right:45px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.157);
+    position: relative;
+    top:30px;
+    list-style-type: none;
+    
+  
+}
+
+
+section {
+    grid-area: cont;
+    background-color: rgb(0, 140, 255);
+}
+
+aside {
+    grid-area: side;
+    background-color: aquamarine;
+}
+
+footer {
+    grid-area: foot;
+    background-color: rgb(118, 192, 193);
 }
