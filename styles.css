@@ -111,7 +111,7 @@ img {
 .content {
     display: flex;
     grid-area: content;
-    background-image: url(/Leon/asset\ 6.jpeg);
+    background-image: url(./Leon/asset\ 6.jpeg);
     background-repeat: no-repeat;
     background-size: 100%;
     justify-content: center;
