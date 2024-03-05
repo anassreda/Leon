@@ -1,45 +1,56 @@
-.page {
+.container {
     position: relative;
+    width: 99vw;
     height: 100vw;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 4vw auto 8vw;
-    background-color: #f8f9fa;
+    background-color: rgb(255, 255, 255);
     grid-template-areas:
-        "log log log . . . . . .  nav"
-        "cont cont  cont cont cont cont cont cont cont cont"
-        "foot foot foot foot foot foot foot foot foot foot ";
+        "header"
+        "content"
+        "content2"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 64px auto auto 80px;
 }
-  .links {
+
+.links {
+    grid-area: header;
     position: absolute;
     right: 188px;
     top: 20px;
-  }
-    .links:hover .icon span:nth-child(2) {
+}
+
+.links:hover .icon span:nth-child(2) {
     width: 100%;
-  }
-    .links .icon {
+}
+
+.links .icon {
     width: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-  }
-    .links .icon span {
+}
+
+.links .icon span {
     background-color: #333;
     margin-bottom: 5px;
     height: 2px;
-  }
-    .links .icon span:first-child {
+}
+
+.links .icon span:first-child {
     width: 100%;
-  }
-    .links .icon span:nth-child(2) {
+}
+
+.links .icon span:nth-child(2) {
     width: 60%;
     transition: all 0.2s ease;
-  }
-    .links .icon span:last-child {
+}
+
+.links .icon span:last-child {
     width: 100%;
-  }
-    .links ul {
+}
+
+.links ul {
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -53,8 +64,9 @@
     top: calc(100% + 15px);
     display: none;
     z-index: 1;
-  }
-    .links ul::before {
+}
+
+.links ul::before {
     content: "";
     border-width: 10px;
     border-style: solid;
@@ -62,46 +74,89 @@
     position: absolute;
     right: 5px;
     top: -20px;
-  }
-    .links:hover ul {
+}
+
+.links:hover ul {
     display: block;
-  }
-    .links ul li a {
+}
+
+.links ul li a {
     display: block;
     padding: 15px;
     text-decoration: none;
     color: #333;
     transition: all 200ms ease;
-  }
-    .links ul li a:hover {
-    padding-left:44px;
+}
+
+.links ul li a:hover {
+    padding-left: 44px;
     background-color: #8888881f;
-  }
-    .links ul li:not(:last-child) a {
+}
+
+.links ul li:not(:last-child) a {
     border-bottom: 1px solid #ddd;
-  }
-.logo{
+}
+
+.logo {
     position: absolute;
     left: 186px;
     top: 19px;
 }
-img{
+
+img {
     width: 4vw;
-    }
-nav {
-    position: absolute;
-    grid-area: nav;
-    right:166px; 
 }
-section {
-    grid-area: cont;
-    background-color: rgb(0, 140, 255);
+
+
+.content {
+    display: flex;
+    grid-area: content;
+    background-image: url(/Leon/asset\ 6.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-content: center;
+    align-items: center;
+
 }
-aside {
-    grid-area: side;
-    background-color: aquamarine;
+
+.content #welcom {
+    display: flex;
+    width: 294px;
+    height: 120px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: "Work Sans", sans-serif;
 }
-footer {
-    grid-area: foot;
-    background-color: rgb(118, 192, 193);
+
+.content #smll {
+    line-height: 34px;
+    font-size: 19px;
+}
+
+.content #grand {
+    color: rgb(16, 202, 183);
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+
+}
+
+.content2 {
+    grid-area: content2;
+    background-color: rgb(0, 255, 30);
+}
+
+.footer {
+    background-color: aqua;
+    grid-area: footer;
+
+}
+
+.content h1 {
+    color: rgb(16, 202, 183);
+    font-family: "Rubik", sans-serif;
+    font-size: 50px;
+
+
 }
