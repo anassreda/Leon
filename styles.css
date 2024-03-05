@@ -1,4 +1,3 @@
-
 .page {
     position: relative;
     height: 100vw;
@@ -10,44 +9,77 @@
         "log log log . . . . . .  nav"
         "cont cont  cont cont cont cont cont cont cont cont"
         "foot foot foot foot foot foot foot foot foot foot ";
-        
 }
-.line{
-    border: 2px  solid black;
-    margin-bottom: 3px;
-    
-}
-span[class="line sho"] {
-  border: 2px solid rgb(183, 4, 237);
-  margin-bottom: 3px;
-  width: 12.5px;
-  transition: all 0.5s  ease;
-  
-}
-.menu-toggle:hover span[class="line sho"] {
-    
-        border: 2px solid rgb(183, 4, 237);
-        margin-bottom: 3px;
-        width: 22px;
-}
-ul:hover{
-    opacity: 1;
-}
-
-
-  
-
-.menu-toggle{
-    
-    display: flex;
-    width: 25px;
+  .links {
     position: absolute;
-    flex-direction: column;
+    right: 188px;
     top: 20px;
-    left: 87.3vw;
-   
-
-}
+  }
+    .links:hover .icon span:nth-child(2) {
+    width: 100%;
+  }
+    .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+    .links .icon span {
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+  }
+    .links .icon span:first-child {
+    width: 100%;
+  }
+    .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: all 0.2s ease;
+  }
+    .links .icon span:last-child {
+    width: 100%;
+  }
+    .links ul {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 1;
+  }
+    .links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+  }
+    .links:hover ul {
+    display: block;
+  }
+    .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: all 200ms ease;
+  }
+    .links ul li a:hover {
+    padding-left:44px;
+    background-color: #8888881f;
+  }
+    .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd;
+  }
 .logo{
     position: absolute;
     left: 186px;
@@ -60,44 +92,15 @@ nav {
     position: absolute;
     grid-area: nav;
     right:166px; 
-    
-
 }
-.menu-toggle:hover span[class="line sho"] +ul{
-    opacity: 1;
-}
-ul{
-    opacity: 0;
-}
-
-ul li {
-    
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #f2e4e4;
-    width: 150px;
-    padding-right:45px;
-    padding-top: 10px;
-    padding-left: 15px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.157);
-    position: relative;
-    top:30px;
-    list-style-type: none;
-    
-  
-}
-
-
 section {
     grid-area: cont;
     background-color: rgb(0, 140, 255);
 }
-
 aside {
     grid-area: side;
     background-color: aquamarine;
 }
-
 footer {
     grid-area: foot;
     background-color: rgb(118, 192, 193);
