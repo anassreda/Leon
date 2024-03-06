@@ -10,7 +10,7 @@
         "content2"
         "footer";
     grid-template-columns: 1fr;
-    grid-template-rows: 64px auto auto 80px;
+    grid-template-rows: 64px 678px auto 80px;
 }
 
 .links {
@@ -106,8 +106,6 @@
 img {
     width: 4vw;
 }
-
-
 .content {
     display: flex;
     grid-area: content;
@@ -116,25 +114,30 @@ img {
     background-size: 100%;
     justify-content: center;
     align-items: center;
+    
 
 }
 
 .content #welcom {
+   
     display: flex;
     width: 294px;
-    height: 120px;
+    height: 145px;
     align-items: center;
     flex-direction: column;
-    justify-content: space-around;
     font-family: "Work Sans", sans-serif;
+    justify-content: space-between;
+    margin-bottom: 18px;
 }
 
 .content #smll {
+    text-align: center;
     line-height: 34px;
     font-size: 19px;
 }
 
 .content #grand {
+
     color: rgb(16, 202, 183);
     font-family: "Work Sans", sans-serif;
     font-weight: 700;
